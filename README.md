@@ -1,2 +1,4 @@
 # Stroke-predictor
-Using Random Forest classifier to predict stroke
+
+##Deployment
+https://salmanhabeeb-stroke-predictor-app-el5co3.streamlitapp.com/
