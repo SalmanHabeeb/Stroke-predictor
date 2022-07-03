@@ -1,21 +1,25 @@
+#Import necessary packages
 import keras
 import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
 
-df = pd.read_csv('scaling_data.csv')
+df = pd.read_csv('scaling_data.csv')                             #Read the scaling data from csv file
+json_file = open('model.json', 'r')                              #Open the file containing model architecture
+loaded_model_json = json_file.read()                             #Read the json content into the variable
+json_file.close()                                                #Close the json file
+loaded_model = keras.models.model_from_json(loaded_model_json)   #Read the model architecture from metadata
+loaded_model.load_weights("model.h5")                            #Load weights from the h5 file
 
-json_file = open('model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-loaded_model = keras.models.model_from_json(loaded_model_json)
-loaded_model.load_weights("model.h5")
-print("Loaded model from disk")
 #Caching the model for faster loading
 @st.cache
 
 def predict(gender, age, hypertension, heart_disease, married, work_status, residence, glucose_level, height,  weight, smoking_status,):
+    '''
+        This function takes text values as input and converts them into numerical values which the model can understand.
+        It returns the predicted chance.
+    '''
     gender = int(gender == 'Female')
     age = (age - df['Mean'][0])/df['Mean'][0]
     hypertension = int(hypertension == 'Yes')
@@ -36,10 +40,13 @@ def predict(gender, age, hypertension, heart_disease, married, work_status, resi
     return prediction
 
 
-st.title('Stroke Chance Predictor')
-st.image('https://thumbs.dreamstime.com/b/human-heart-12427347.jpg')
-st.header('Fill the details :')
+st.title('Stroke Chance Predictor')                                    #Set the title for the application. This appears at top of page.
+st.image('https://thumbs.dreamstime.com/b/human-heart-12427347.jpg')   #Set the link to image which will be used as cover image for application
+st.header('Fill the details :')                                        #Set the form title. This appears before input form
 
+#Take input variables as entry
+#st.selectbox() uses dropbox for input entry
+#st.number_input() uses numerical input box for entry. @Caution: Use either all integer values or all float values in st.number_input(), else error is displayed.
 gender = st.selectbox('Gender :', ['Female', 'Male', 'Other'])
 age = st.number_input('Age :', min_value = 0.3, max_value = 80.0, value = 25.0)
 hypertension = st.selectbox('Hypertension :', ['Yes', 'No'])
@@ -52,6 +59,7 @@ height = st.number_input('Height(in cm) :', min_value = 30.0, max_value = 220.0,
 weight = st.number_input('Weight(in kg) :', min_value = 5.0, max_value = 120.0, value = 70.0)
 smoking_status = st.selectbox('Have you ever smoked?', ['Yes', 'No'])
 
+#If button is pressed, display the predicted value
 if st.button('Predict chance of having a stroke'):
     chance = predict(gender, age, hypertension, heart_disease, married, work_status, residence, glucose_level, height,  weight, smoking_status,)
     st.success(f'The predicted chance of stroke is {chance[0][0]*100:.2f}%')
