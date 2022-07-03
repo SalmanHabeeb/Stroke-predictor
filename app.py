@@ -37,7 +37,7 @@ def predict(gender, age, hypertension, heart_disease, married, work_status, resi
 
 
 st.title('Stroke Chance Predictor')
-st.image('https://github.com/SalmanHabeeb/Stroke-predictor/blob/main/human_heart_image.jpg')
+st.image('https://thumbs.dreamstime.com/b/human-heart-12427347.jpg')
 st.header('Fill the details :')
 
 gender = st.selectbox('Gender :', ['Female', 'Male', 'Other'])
