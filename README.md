@@ -8,6 +8,6 @@ The app and the model used in this project are for educational purposes only and
 ## Dataset
 Dataset used in this project is available at : https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
-## Deployment
+## Application
 To access the app, either copy-paste this url or click on it.
 https://salmanhabeeb-stroke-predictor-app-dvz8nz.streamlitapp.com/
