@@ -49,15 +49,15 @@ st.header('Fill the details :')                                        #Set the 
 #st.number_input() uses numerical input box for entry. @Caution: Use either all integer values or all float values in st.number_input(), else error is displayed.
 gender = st.selectbox('Gender :', ['Female', 'Male', 'Other'])
 age = st.number_input('Age :', min_value = 0.3, max_value = 80.0, value = 25.0)
-hypertension = st.selectbox('Hypertension :', ['Yes', 'No'])
-heart_disease = st.selectbox('Heart Disease :', ['Yes', 'No'])
-married = st.selectbox('Have you ever married?', ['Yes', 'No'])
+hypertension = st.selectbox('Hypertension :', ['No', 'Yes'])
+heart_disease = st.selectbox('Heart Disease :', ['No', 'Yes'])
+married = st.selectbox('Have you ever married?', ['No', 'Yes'])
 work_status = st.selectbox('Work type :', ['Private job', 'Government job', 'Self-employed', 'Not employed'])
 residence = st.selectbox('Residence type :', ['Urban', 'Rural'])
 glucose_level = st.number_input('Average Glucose Level(in mg/dL) :', min_value = 10.0, max_value = 400.0, value = 120.0)
 height = st.number_input('Height(in cm) :', min_value = 30.0, max_value = 220.0, value = 160.0)
 weight = st.number_input('Weight(in kg) :', min_value = 5.0, max_value = 120.0, value = 70.0)
-smoking_status = st.selectbox('Have you ever smoked?', ['Yes', 'No'])
+smoking_status = st.selectbox('Have you ever smoked?', ['No', 'Yes'])
 
 #If button is pressed, display the predicted value
 if st.button('Predict chance of having a stroke'):
