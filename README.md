@@ -1,9 +1,9 @@
 # Stroke-predictor
 
 ## Background
-Stroke is one of the leading causes of death. In 2011, stroke was the 2nd leading cause of death, accounting for 6.2 million deaths worldwide(11% of total deaths). Some risk factors for stroke has been identified as hypertension, age, etc.. 
+Stroke is one of the leading causes of death. In 2011, stroke was the 2nd leading cause of death, accounting for 6.2 million deaths worldwide(11% of total deaths). Major risk factors of stroke have been identified as hypertension, age, previous occurance of heart disease and others. Nevertheless, chances of occurance of a stroke are hard to determine even now. 
 
-To develop further insights on the chances of a stroke, neural networks seem to me as the best bet. Deep learning models predict an event by attaching some probability to the event. This probability gives the chance of occurance of a stroke in our case. In this project we use deep learning model to predict chances of a person getting the stroke. The model is deployed on a Streamlit app for the same purpose.
+However, deep learning models offer a promising approach on computing these chances. To predict the occurance of an event, deep learning models compute the probability that the event will occur. This probability gives the chance of occurance of that event. In this project, I use deep learning model to predict chances of a person getting the stroke. The model is deployed on a Streamlit app for the same purpose.
 
 ## Disclaimer
 The app and the model used in this project are for educational purposes only and are not intended to provide medical advice. For any medical issues consult a doctor.
