@@ -22,4 +22,7 @@ https://salmanhabeeb-stroke-predictor-app-dvz8nz.streamlitapp.com/
 
 This repository is licensed under GNU General Public License v3.0.
 
-For more details, refer to LICENSE file and License Notice in this repository.
+For more details, refer to [LICENSE](https://github.com/SalmanHabeeb/Stroke-predictor/blob/main/LICENSE) 
+and 
+[License Notice](https://github.com/SalmanHabeeb/Stroke-predictor/blob/main/License%20Notice.md) 
+in this repository.
