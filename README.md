@@ -1,6 +1,5 @@
 # Stroke-predictor
                                                                                                  <sub>Copyright (C) 2022  Syed Salman Habeeb Quadri</sub>
-                                                                                                                                                 [Notice](https://github.com/SalmanHabeeb/Stroke-predictor/edit/main/README.md)
 
 ## Background
 Stroke is one of the leading causes of death. In 2011, stroke was the 2nd leading cause of death, accounting for 6.2 million deaths worldwide(11% of total deaths). Major risk factors of stroke have been identified as hypertension, age, previous occurance of heart disease and others. Nevertheless, chances of occurance of a stroke are hard to determine even now. 
